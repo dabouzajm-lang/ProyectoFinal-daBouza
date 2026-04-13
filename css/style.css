@@ -1,0 +1,117 @@
+/* ESTILOS GENERALES */
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f8;
+    margin: 40px;
+    color: #333;
+}
+
+main{
+    display:flex;
+    gap:40px;
+    align-items:flex-start; /* mejora alineación */
+}
+
+h1{
+    color:#1d3557;
+    margin-bottom:10px;
+}
+
+h2{
+    margin-top:30px;
+    color:#1d3557;
+}
+
+h3{
+    margin-top:25px;
+    color:#457b9d;
+}
+
+
+/* FORMULARIO */
+
+.form-section{
+    background:white;
+    padding:20px;
+    border-radius:8px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+    max-width:320px;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+input,
+select{
+    padding:8px;
+    font-size:14px;
+    border-radius:4px;
+    border:1px solid #ccc;
+}
+
+button{
+    padding:8px;
+    background-color:#1d3557;
+    color:white;
+    border:none;
+    border-radius:4px;
+    cursor:pointer;
+    transition:0.2s; /* mejora visual */
+}
+
+button:hover{
+    background-color:#457b9d;
+}
+
+
+/* CONTENEDOR JUGADORES */
+
+.contenedor-jugadores{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-bottom:20px;
+}
+
+
+/* CARD JUGADOR */
+
+.card-jugador{
+    background:white;
+    border-radius:8px;
+    padding:15px;
+    width:180px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+
+.card-jugador h4{
+    margin:0 0 8px 0;
+    color:#1d3557;
+}
+
+.card-jugador p{
+    margin:4px 0;
+    font-size:14px;
+}
+
+.card-jugador button{
+    margin-top:10px;
+    width:100%;
+    background-color:#e63946;
+}
+
+.card-jugador button:hover{
+    background-color:#c1121f;
+}
+
+
+/* CONTADOR */
+
+#contador{
+    font-weight:bold;
+    margin-bottom:10px;
+}
