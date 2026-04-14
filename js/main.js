@@ -156,10 +156,9 @@ function ficharJugador(jugador){
     equipo.push(jugadorFinal)
 
     gastoTotal += precio
-
     guardarEquipo()
-
     mostrarEquipo()
+    mostrarPresupuesto()
 
     Swal.fire({
         title: "Jugador fichado",
@@ -212,8 +211,8 @@ function eliminarJugador(index){
     equipo.splice(index, 1)
 
     guardarEquipo()
-
     mostrarEquipo()
+    mostrarPresupuesto()
 
     Swal.fire({
         title: "Jugador eliminado",
@@ -273,6 +272,7 @@ function resetearEquipo(){
 
             guardarEquipo()
             mostrarEquipo()
+            mostrarPresupuesto()
 
             Swal.fire("Equipo reseteado", "", "success")
 
