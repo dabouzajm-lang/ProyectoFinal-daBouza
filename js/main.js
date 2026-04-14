@@ -3,7 +3,7 @@
 let equipo = JSON.parse(localStorage.getItem("equipo")) || []
 let jugadoresAPI = []
 
-let presupuesto = 1000000
+let presupuesto = 100000000
 let gastoTotal = 0
 
 // RECALCULAR GASTO AL CARGAR LA PAGINA
@@ -125,7 +125,6 @@ function ficharJugador(jugador){
         return
     }
 
-    // límite de jugadores
     if(equipo.length >= 6){
         Swal.fire({
             title: "Equipo completo",
@@ -137,7 +136,6 @@ function ficharJugador(jugador){
 
     const precio = generarPrecio()
 
-    // validar presupuesto
     if(gastoTotal + precio > presupuesto){
         Swal.fire({
             title: "Sin presupuesto",
@@ -154,8 +152,8 @@ function ficharJugador(jugador){
     }
 
     equipo.push(jugadorFinal)
-
     gastoTotal += precio
+
     guardarEquipo()
     mostrarEquipo()
 
@@ -164,7 +162,6 @@ function ficharJugador(jugador){
         text: `${jugador.name} - $${precio}`,
         icon: "success"
     })
-
 }
 
 
@@ -206,6 +203,8 @@ function eliminarJugador(index){
 
     const jugador = equipo[index]
 
+    gastoTotal -= jugador.precio
+
     equipo.splice(index, 1)
 
     guardarEquipo()
@@ -216,7 +215,6 @@ function eliminarJugador(index){
         text: `${jugador.name} fue eliminado del equipo`,
         icon: "info"
     })
-
 }
 
 
