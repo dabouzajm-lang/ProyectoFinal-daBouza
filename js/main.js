@@ -158,7 +158,6 @@ function ficharJugador(jugador){
     gastoTotal += precio
     guardarEquipo()
     mostrarEquipo()
-    mostrarPresupuesto()
 
     Swal.fire({
         title: "Jugador fichado",
@@ -184,9 +183,9 @@ function mostrarEquipo(){
         card.innerHTML = `
             <h4>${jugador.name}</h4>
             <p>Posición: ${jugador.posicion}</p>
-             <p>Precio: $${jugador.precio}</p>
+            <p>Precio: $${jugador.precio}</p>
             <button>Eliminar</button>
-            `
+        `
 
         const boton = card.querySelector("button")
 
@@ -197,9 +196,8 @@ function mostrarEquipo(){
         contenedorEquipo.appendChild(card)
 
     })
-
+    mostrarPresupuesto()
 }
-
 
 // ELIMINAR JUGADOR
 
@@ -212,7 +210,6 @@ function eliminarJugador(index){
 
     guardarEquipo()
     mostrarEquipo()
-    mostrarPresupuesto()
 
     Swal.fire({
         title: "Jugador eliminado",
@@ -229,7 +226,6 @@ async function init(){
 
     mostrarJugadoresAPI(jugadoresAPI)
     mostrarEquipo()
-    mostrarPresupuesto()
 
 }
 
@@ -272,7 +268,6 @@ function resetearEquipo(){
 
             guardarEquipo()
             mostrarEquipo()
-            mostrarPresupuesto()
 
             Swal.fire("Equipo reseteado", "", "success")
 
