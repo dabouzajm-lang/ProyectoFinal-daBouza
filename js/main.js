@@ -1,14 +1,15 @@
-
-// VARIABLES
-
+// VARIABLES 
 
 let equipo = JSON.parse(localStorage.getItem("equipo")) || []
 let jugadoresAPI = []
+
+let presupuesto = 1000000
+let gastoTotal = 0
+
 // RECALCULAR GASTO AL CARGAR LA PAGINA
 equipo.forEach(jugador => {
     gastoTotal += jugador.precio || 0
 })
-
 // SELECTORES DOM
 
 
@@ -73,8 +74,6 @@ function asignarPosicion(){
     return posiciones[random]
 }
 
-let presupuesto = 100000000
-let gastoTotal = 0
 
 function generarPrecio(){
     return Math.floor(Math.random() * 500000) + 100000
